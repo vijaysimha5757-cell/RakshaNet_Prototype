@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5a4bd8" />
+  <title>RakshaNet | Led by Vijaysimha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" data-page="overview" aria-label="RakshaNet home">
+        <div class="brand-mark">R</div>
+        <div><strong>RakshaNet</strong><span>Safety network</span></div>
+      </a>
+      <div class="leader-card">
+        <div class="leader-avatar">V</div>
+        <div><strong>Vijaysimha</strong><small>Group Leader</small></div>
+        <span class="leader-check">✓</span>
+      </div>
+      <nav aria-label="Main navigation">
+        <button class="nav-item active" data-page="overview"><span class="nav-symbol">▦</span>Overview</button>
+        <button class="nav-item" data-page="women"><span class="nav-symbol">♡</span>Women's Safety</button>
+        <button class="nav-item" data-page="child"><span class="nav-symbol">♧</span>Child Protection</button>
+        <button class="nav-item" data-page="contacts"><span class="nav-symbol">◎</span>Trusted Contacts</button>
+        <button class="nav-item" data-page="history"><span class="nav-symbol">◷</span>Alert History</button>
+        <button class="nav-item" data-page="about"><span class="nav-symbol">ⓘ</span>About Project</button>
+      </nav>
+      <div class="sidebar-note"><span class="live-dot"></span><div><strong>Prototype running</strong><small>Local demo environment</small></div></div>
+      <div class="sidebar-footer">National Level Hackathon 3.0<br/><small>Innovate for Impact</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">WOMEN'S SAFETY & CHILD PROTECTION</p><h1 id="page-title">Overview</h1></div>
+        <div class="top-actions"><span class="demo-badge">● DEMO MODE</span><div class="top-avatar" title="Group Leader: Vijaysimha">V</div></div>
+      </header>
+
+      <section class="welcome-row">
+        <div><p class="eyebrow">WELCOME TO RAKSHANET</p><h2>Your safety, connected.</h2><p>A simple safety interface for emergency alerts, location awareness, and guardian check-ins.</p></div>
+        <div class="leader-chip"><span>PROJECT LEAD</span><strong>Vijaysimha</strong></div>
+      </section>
+
+      <div class="notice" role="status"><strong>Prototype notice</strong><span>This is a hackathon demo. It does not contact police or send real messages. Use fictional data while testing.</span></div>
+
+      <section class="stat-grid">
+        <article class="stat-card"><div class="stat-icon purple">↗</div><div><span>Demo alerts</span><strong id="stat-alerts">0</strong><small>Saved on this browser</small></div></article>
+        <article class="stat-card"><div class="stat-icon green">⌖</div><div><span>Location status</span><strong id="stat-location">Not requested</strong><small id="location-detail">Permission required</small></div></article>
+        <article class="stat-card"><div class="stat-icon orange">♡</div><div><span>Trusted contacts</span><strong id="stat-contacts">0</strong><small>Local demo entries</small></div></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel sos-panel">
+          <div class="panel-heading"><div><p class="eyebrow">QUICK ACTION</p><h3>Emergency assistance</h3></div><span class="icon-circle">!</span></div>
+          <p class="muted">Create a demo SOS event to show how an emergency alert could be recorded in a future connected system.</p>
+          <button id="sos-button" class="sos-button"><span class="sos-pulse">!</span><span><strong>ACTIVATE SOS DEMO</strong><small>Records a demonstration alert only</small></span><span class="arrow">→</span></button>
+          <div class="sos-foot"><span>●</span> No real emergency services are contacted</div>
+        </article>
+
+        <article class="panel location-panel">
+          <div class="panel-heading"><div><p class="eyebrow">LOCATION AWARENESS</p><h3>Current device location</h3></div><span class="icon-circle green-icon">⌖</span></div>
+          <div class="map-placeholder" id="map-placeholder"><div class="map-grid"></div><div class="map-pin">●</div><div class="map-label" id="map-label">Location not requested</div></div>
+          <div class="location-actions"><button class="button primary" id="location-button">Get my location</button><button class="button secondary" id="clear-location">Clear display</button></div>
+          <p class="tiny muted" id="location-message">Your browser will ask for permission. Location is not sent to anyone.</p>
+        </article>
+      </section>
+
+      <section class="content-grid lower-grid">
+        <article class="panel">
+          <div class="panel-heading"><div><p class="eyebrow">PROTECTION MODES</p><h3>Explore safety tools</h3></div></div>
+          <div class="mode-list">
+            <button class="mode-card" data-page="women"><span class="mode-icon pink">♡</span><span><strong>Women's Safety</strong><small>Demo SOS and location awareness</small></span><b>→</b></button>
+            <button class="mode-card" data-page="child"><span class="mode-icon blue">♧</span><span><strong>Child Protection</strong><small>Guardian check-in notes</small></span><b>→</b></button>
+          </div>
+        </article>
+        <article class="panel">
+          <div class="panel-heading"><div><p class="eyebrow">RECENT ACTIVITY</p><h3>Latest demo alerts</h3></div><button class="text-button" data-page="history">View all →</button></div>
+          <div id="recent-alerts" class="recent-list"><div class="empty-state">No alerts yet. Demo activity will appear here.</div></div>
+        </article>
+      </section>
+
+      <section id="workspace" class="panel workspace hidden"></section>
+      <footer><strong>RakshaNet</strong> · Project led by Vijaysimha · National Level Hackathon 3.0</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
